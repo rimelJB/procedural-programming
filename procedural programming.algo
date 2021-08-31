@@ -1,0 +1,28 @@
+PROCEDURE dot_product (n:Integer, VAR T1,T2:ARRAY_OF integer)
+var
+i,result: Integer;
+begin
+for i FROM 0 TO T1.length-1 STEP 1 DO
+result+=T1[i]*T2[i];
+END_FOR
+if (result=0)then
+write ("orthogonal");
+else 
+write ("non orthogonal");
+end
+
+ALGORITHM PRODUIT SCALAIRE
+var
+T1,T2 : ARRAY_OF integer;
+n,i: integer;
+begin
+for i from 1 to n step 1 do
+read (T1);
+read (T2);
+dot_product(n,T1,T2);
+END_FOR
+end
+ 
+
+
+

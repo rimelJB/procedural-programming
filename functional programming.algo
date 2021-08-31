@@ -1,0 +1,22 @@
+function dot_product (n:Integer, VAR T1,T2:ARRAY_OF integer): integer
+var
+i,p: Integer;
+begin
+p:=0;
+for i FROM 0 TO T1.length-1 STEP 1 DO
+p+=T1[i]*T2[i];
+END_FOR
+RETURN p;
+end
+
+ALGORITHM PRODUIT SCALAIRE
+var
+Tab1,Tab2 : ARRAY_OF integer;
+n,p: integer;
+begin
+p:=dot_product(n,Tab1,Tab2);
+if (p=0)then
+write (" two vectors of given  are orthogonal");
+else 
+write ("noty orthogonal")
+end
