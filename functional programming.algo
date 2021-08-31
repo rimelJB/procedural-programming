@@ -14,6 +14,10 @@ var
 Tab1,Tab2 : ARRAY_OF integer;
 n,p: integer;
 begin
+for i from 1 to n step 1 do
+read (T1);
+read (T2);
+end_for
 p:=dot_product(n,Tab1,Tab2);
 if (p=0)then
 write (" two vectors of given  are orthogonal");
